@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateCalc" >
+
+    <TextView
+        android:id="@+id/date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_title"
+        android:textSize="32sp"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/date_line0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_below="@id/date_title" />
+
+    <LinearLayout
+        android:id="@+id/date_case0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/date_line0" >
+
+        <TextView
+            android:id="@+id/date_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="24sp"
+            android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_dec"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_dec" />
+
+            <Button
+                android:id="@+id/btn_inc"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_inc" />
+
+            <Button
+                android:id="@+id/btn_now"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_now" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/date_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_below="@id/date_case0" />
+
+    <LinearLayout
+        android:id="@+id/date_case1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/date_line1" >
+
+        <TextView
+            android:id="@+id/date_comp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="4dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_dec2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_dec" />
+
+            <Button
+                android:id="@+id/btn_inc2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_inc" />
+
+            <Button
+                android:id="@+id/btn_now2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_now" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/date_case3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/date_case1" >
+
+        <TextView
+            android:id="@+id/date_diff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:paddingRight="12.0px"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/txt_date" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/date_line4"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000"
+        android:layout_below="@id/date_case3" />
+
+    <LinearLayout
+        android:id="@+id/info_case3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/log_btn_copy"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8.0px"
+            android:text="@string/btn_copy" />
+
+        <Button
+            android:id="@+id/log_btn_clear"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8.0px"
+            android:text="@string/btn_clear" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/log_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_line4"
+        android:layout_above="@id/info_case3" >
+
+        <EditText
+            android:id="@+id/calc_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8.0px"
+            android:maxLength="65536"
+            android:textSize="18sp"
+            android:inputType="textMultiLine"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_below="@id/date_line4" />
+
+    </ScrollView>
+
+</RelativeLayout>

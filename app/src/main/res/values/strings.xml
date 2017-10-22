@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DateCalc</string>
+    <string name="action_settings">Settings</string>
+    <string name="txt_title">日数の計算</string>
+    <string name="txt_arrow">　→　</string>
+    <string name="txt_date">日</string>
+    <string name="txt_base">基準日</string>
+    <string name="txt_comp">比較日</string>
+    <string name="txt_diff">差分</string>
+    <string name="dlog_find_title">計算日数の入力</string>
+    <string name="dlog_find_msg">日数を入れてください</string>
+    <string name="finder_btn_ok">ＯＫ</string>
+    <string name="finder_btn_cancel">キャンセル</string>
+
+    <string name="btn_now">今</string>
+    <string name="btn_inc">＋</string>
+    <string name="btn_dec">－</string>
+    <string name="btn_copy">COPY LOG</string>
+    <string name="btn_clear">CLEAR LOG</string>
+
+    <string-array name="stat_week">
+        <item>日</item>
+        <item>月</item>
+        <item>火</item>
+        <item>水</item>
+        <item>木</item>
+        <item>金</item>
+        <item>土</item>
+    </string-array>
+
+</resources>
